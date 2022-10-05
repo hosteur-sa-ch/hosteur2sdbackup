@@ -2,6 +2,7 @@
 source /root/hosteur2sdbackup/.restic_var
 SERVICE="restic"
 
+resticsnap=`restic snapshots --json`
 items=$(echo "$resticsnap" | jq -c -r '.[]')
 for item in ${items[@]}; do
 	echo ${item}
