@@ -13,4 +13,4 @@ size=$(echo "$resticstats" | jq '.total_size')
 num=$(echo "$resticstats" | jq '.total_file_count')
 host=`hostname`
 ip=`hostname -I | awk -F ' '  '{print $2;}'`
-curl -H 'Content-Type: application/json' -XPOST -u $RESTIC_OPS_LOGIN $RESTIC_OPS_URL/resticbkp_stats/_doc -d '{"hostname":"'$host'", "hostip":"''", "size":'$size', "nb_obj":'$num'}' 
+curl -H 'Content-Type: application/json' -XPOST -u $RESTIC_OPS_LOGIN $RESTIC_OPS_URL/resticbkp_stats/_doc -d '{"hostname":"'$host'", "hostip":"'$ip'", "size":'$size', "nb_obj":'$num'}' 
