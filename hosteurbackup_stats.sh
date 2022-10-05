@@ -1,5 +1,5 @@
 #!/bin/bash
-source /root/restic_var
+source /root/hosteur2sdbackup/.restic_var
 SERVICE="restic"
 
 items=$(echo "$resticsnap" | jq -c -r '.[]')
