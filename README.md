@@ -18,7 +18,7 @@ export RESTIC_BACKUPREPO=
 export GOMAXPROCS=8
 export RESTIC_UPLOAD_LIMIIT=150000
 export RESTIC_OPS_LOGIN=
-export RETIC_OPS_URL=
+export RESTIC_OPS_URL=
 ```
 
 3 . Create a cron like 
