@@ -1,2 +1,2 @@
-cd /root/
-git clone https://github.com/hosteur-sa-ch/hosteur2sdbackup.git
+cd /root/hosteur2sdbackup/
+/root/hosteur2sdbackup/hosteurbackup.sh
