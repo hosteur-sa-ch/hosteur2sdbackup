@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /root/
 git clone https://github.com/hosteur-sa-ch/hosteur2sdbackup.git
 chmod +x /root/hosteur2sdbackup/hosteurbackup.sh
