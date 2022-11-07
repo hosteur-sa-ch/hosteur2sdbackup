@@ -8,5 +8,5 @@ chmod +x /root/hosteur2sdbackup/hosteurbackup_dobackup.sh
 chmod +x /root/hosteur2sdbackup/hosteurbackup_unlock.sh
 echo "Update restic" >>/var/log/hosteurbackup.log
 restic self-update
-/root/hosteur2sdbackup/hosteurbackup_unlock.sh
-/root/hosteur2sdbackup/hosteurbackup_dobackup.sh
+bash /root/hosteur2sdbackup/hosteurbackup_unlock.sh
+bash /root/hosteur2sdbackup/hosteurbackup_dobackup.sh
