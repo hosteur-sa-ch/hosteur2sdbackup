@@ -1,5 +1,6 @@
 #!/bin/bash
-source /root/hosteur2sdbackup/.restic_var
+cd /root/hosteur2sdbackup/
+source ./.restic_var
 SERVICE="restic"
 
 resticsnap=`restic snapshots --json`
