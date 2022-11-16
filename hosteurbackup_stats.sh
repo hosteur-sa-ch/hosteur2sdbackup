@@ -12,4 +12,5 @@ resticstats=`restic stats --json`
 size=$(echo "$resticstats" | jq '.total_size')
 num=$(echo "$resticstats" | jq '.total_file_count')
 host=`hostname`
-curl -H 'Content-Type: application/json' -XPOST -u $RESTIC_OPS_LOGIN $RESTIC_OPS_URL/resticbkp_stats/_doc -d '{"hostname":"'$host'", "repos":"'$RESTIC_REPOSITORY'", "size":'$size', "nb_obj":'$num'}' 
+d=`date +%Y-%m-%dT%T`
+curl -H 'Content-Type: application/json' -XPOST -u $RESTIC_OPS_LOGIN $RESTIC_OPS_URL/resticbkp_statsv2/_doc -d '{"hostname":"'$host'", "repos":"'$RESTIC_REPOSITORY'", "size":'$size', "nb_obj":'$num', "@timestamp":"'$d'"}' 
